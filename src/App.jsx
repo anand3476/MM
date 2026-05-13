@@ -396,7 +396,7 @@ const Unit1Content = ({ theme }) => (
     ]} />
 
     <SectionHeading number="9" title="Marketing Environment" theme={theme} />
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, margin: '14px 0' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, margin: '14px 0', '@media (maxWidth: 600px)': { gridTemplateColumns: '1fr' } }}>
       <div style={{ background: '#EDE9FE', border: '1.5px solid #7C3AED', borderRadius: 10, padding: '14px 16px' }}>
         <div style={{ fontWeight: 700, color: '#5B21B6', marginBottom: 8, fontSize: 14 }}>🔵 Micro Environment</div>
         <div style={{ fontSize: 13, color: '#374151', lineHeight: 1.7 }}>Forces close to company:<br />Company, Suppliers, Intermediaries, Competitors, Customers, Publics</div>
@@ -410,7 +410,7 @@ const Unit1Content = ({ theme }) => (
     </div>
 
     <SectionHeading number="10" title="Answer Writing Structure" theme={theme} />
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, margin: '14px 0' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, margin: '14px 0', '@media (maxWidth: 600px)': { gridTemplateColumns: '1fr' } }}>
       <div style={{ background: theme.light, border: `1.5px solid ${theme.border}`, borderRadius: 10, padding: '14px 16px' }}>
         <div style={{ fontWeight: 700, color: theme.accent, marginBottom: 8, fontSize: 14 }}>3/7-Mark Format</div>
         {['Definition', 'Main points/headings', 'Explanation of each', 'Example', 'Conclusion'].map((s, i) => (
@@ -786,7 +786,7 @@ const Unit4Content = ({ theme }) => (
     <ExampleBox>New smartphone launch — TV ad + Instagram reels + influencer review + retail posters + cashback offer + email campaign. All say: "Best camera under ₹20,000".</ExampleBox>
 
     <SectionHeading number="6" title="Sales Promotion Methods" theme={theme} />
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10, margin: '14px 0' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: 10, margin: '14px 0' }}>
       {[
         { type: 'Consumer Promotions', color: '#059669', items: ['Coupons', 'Discounts', 'Free samples', 'Cashback', 'Contests', 'Loyalty points'] },
         { type: 'Trade Promotions', color: '#D97706', items: ['Dealer discounts', 'Display allowance', 'Free stock', 'Trade shows'] },
@@ -856,7 +856,7 @@ const Unit5Content = ({ theme }) => (
     </div>
 
     <SectionHeading number="3" title="Rural Marketing Strategies" theme={theme} />
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, margin: '14px 0' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, margin: '14px 0', '@media(max-width:600px)':{gridTemplateColumns:'1fr'} }}>
       <div style={{ background: theme.light, border: `1.5px solid ${theme.border}`, borderRadius: 10, padding: '14px 16px' }}>
         <div style={{ fontWeight: 700, color: theme.accent, marginBottom: 8, fontSize: 14 }}>📢 Promotion Strategies</div>
         {['Folk media', 'Loudspeaker campaigns', 'Wall posters', 'Regional language ads', 'Demonstration camps', 'Local events sponsorship', 'Radio ads'].map((s, i) => (
@@ -872,7 +872,7 @@ const Unit5Content = ({ theme }) => (
     </div>
 
     <SectionHeading number="4" title="Agricultural Marketing" theme={theme} />
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, margin: '14px 0' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, margin: '14px 0', '@media(max-width:600px)':{gridTemplateColumns:'1fr'} }}>
       <div style={{ background: '#D1FAE5', border: '1.5px solid #059669', borderRadius: 10, padding: '14px 16px' }}>
         <div style={{ fontWeight: 700, color: '#065F46', marginBottom: 8, fontSize: 14 }}>✅ Opportunities</div>
         {['Food processing industry', 'Export demand', 'Organic farming market', 'Cold storage growth', 'Online mandi platforms'].map((s, i) => (
@@ -914,7 +914,7 @@ const Unit5Content = ({ theme }) => (
     <SubBox letter="3" title="Franchising" content="Business model shared with foreign partner." example="McDonald's outlets." theme={theme} />
     <SubBox letter="4" title="Joint Venture" content="Two companies jointly invest in foreign market." theme={theme} />
     <SubBox letter="5" title="Direct Investment (FDI)" content="Company sets up own plant abroad. Maximum control, maximum risk." theme={theme} />
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, margin: '14px 0' }}>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, margin: '14px 0', '@media(max-width:600px)':{gridTemplateColumns:'1fr'} }}>
       <div style={{ background: '#D1FAE5', border: '1.5px solid #059669', borderRadius: 10, padding: '14px 16px' }}>
         <div style={{ fontWeight: 700, color: '#065F46', marginBottom: 8, fontSize: 14 }}>✅ Opportunities</div>
         {['Larger market size', 'Increased profits', 'Foreign exchange earnings', 'Risk diversification', 'Global brand image'].map((s, i) => (
@@ -997,8 +997,7 @@ export default function App() {
   };
 
   return (
-    <div style={{ display: 'flex', height: '100vh', background: '#F3F4F6', fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif', overflow: 'hidden' }}>
-      
+    <div style={{ display: 'flex', height: '100vh', background: '#F3F4F6', fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"', overflow: 'hidden' }}>
       {isMobileMenuOpen && (
         <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.5)', zIndex: 40 }} onClick={() => setIsMobileMenuOpen(false)} />
       )}
