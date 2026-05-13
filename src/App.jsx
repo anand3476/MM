@@ -1020,9 +1020,8 @@ export default function App() {
               </div>
               <div style={{ fontSize: 11, color: '#9CA3AF', marginTop: 4, letterSpacing: 1, textTransform: 'uppercase' }}>Exam Edition</div>
             </div>
-            <button onClick={() => setIsMobileMenuOpen(false)} style={{ background: 'none', border: 'none', color: '#9CA3AF', cursor: 'pointer', padding: 4 }} className="lg:hidden">✕</button>
-          </div>
-        </div>
+            <button onClick={() => setIsMobileMenuOpen(true)} 
+  		className="p-2 -ml-2 mr-3 text-gray-600 hover:bg-gray-200 rounded"><Menu size={24} /></button>        	</div>
         <nav style={{ flex: 1, overflowY: 'auto', padding: '16px 12px' }}>
           {units.map(unit => {
             const t = unitThemes[unit.id];
